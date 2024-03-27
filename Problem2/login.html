@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="login.css">
+  <title>Login</title>
+</head>
+<body>
+
+<form class="container">
+  <img src="log.jpeg">
+  <div class="login_field">
+    <i class="fa fa-envelope"></i>
+    <input type="text" class="username" id="username" name="username" placeholder="User" required>
+  </div>
+  <br>
+  <div class="login_field">
+    <i class="fa fa-key"></i>
+    <input type="password" class="password" id="password" name="password" placeholder="Password" required>
+    <br>    <a href="forgotPassword.html" style="margin-left: 60%;
+    font-size: 1w;">Forgot password?</a>
+    <br>
+    <br>
+    <input type="checkbox" id="logcheck">&nbsp;
+    <label for="logcheck" class="text" style="font-size: small; color: black;">Keep me logged in.</label>
+    <br>
+  <a href="main.html"><button type="button" id="loginBtn">Login</button></a>
+    <p>--------------------------OR--------------------------</p>
+    <button type="button" id="registerBtn">Register</button>
+  </div>
+</form>
+
+<section class="register-container" id="registerSection">
+        <h2>Register Now</h2>
+        <form>
+            <div class="row">
+                <div class="column">
+                    <label for="first_name">First Name:</label>
+                    <input type="text" id="first_name" name="first_name" required>
+                </div>
+                <div class="column">
+                    <label for="last_name">Last Name:</label>
+                    <input type="text" id="last_name" name="last_name" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone"oninput="checkPhoneNumber()" required>
+                </div>
+                <div class="column">
+                    <label for="email">Your Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+            <button type="button" id="butt" onclick="showOtp()" disabled>Send OTP</button>
+            <div class="Otp" id="otpSection">
+              <label for="otp">Enter OTP:</label>
+              <input type="text" name="otp" id="otp" placeholder="OTP" required>
+              <button type="submit">Verify</button>
+            </div>
+            <script>
+              const alert = document.getElementById('loginBtn')
+              alert()
+
+                function showOtp() {
+                  var otpSection = document.getElementById("otpSection");
+                  var sendOpt = document.getElementById("butt");
+                  otpSection.style.display = "block";
+                  sendOpt.style.display = "none";
+                }
+
+                function checkPhoneNumber() {
+                  var phoneNumber = document.getElementById("phone").value;
+                  var sendOpt = document.getElementById("butt");
+
+                  
+                  if (phoneNumber.length === 10) {
+                    sendOpt.disabled = false; 
+                  } else {
+                    sendOpt.disabled = true; 
+                  }
+                }
+              </script>
+            <div class="row">
+                <div class="column">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="column">
+                    <label for="confirm_password">Confirm Password:</label>
+                    <input type="password" id="confirm_password" name="confirm_password" required>
+                </div>
+            </div>
+
+            <button type="submit">Register</button>
+        </form>
+
+    </section>
+
+    <script src="login.js"></script>
+
+</body>
+</html>

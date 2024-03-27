@@ -1,0 +1,578 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  .navbar h1 {
+    position: absolute;
+    left: 10%;
+    color: #181818c2;
+    border: 0px solid rgb(56, 56, 237);
+    box-shadow: 0 0 10px white; /* Adjust the shadow properties as needed */
+
+  }
+
+
+  .header-page{
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: background-image 0.5s; /* Smooth transition effect */
+    height: auto; 
+    width: 100%;
+
+    }
+    .dropdown-menu{
+      background-color:rgba(0, 0, 0, 0.7);
+    }
+    .dropdown-menu li{
+      padding-left: 5px;
+    }
+
+    .navbar {
+      background: rgb(213,227,246);
+    background: linear-gradient(0deg, rgb(229, 240, 255) 0%, rgb(172, 201, 254) 100%);    
+      height: 20%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 10px;
+      margin-right: 0;
+
+    }
+    .navbar-logo img{
+      margin-left: 30px ;
+      width: 100px; /* Adjust the width as needed */
+      height: auto;
+
+    }
+    .navbar-menu {
+      list-style: none;
+      display: flex;
+      margin-top: 10px;
+      padding-right: 10px;
+
+    }
+
+    .navbar-menu li {
+      margin-right: 40px;
+      font-family: sans-serif;
+
+    }
+
+    .navbar-menu li :visited{
+      color: black;
+
+    }
+
+    .navbar-menu li :hover{
+      color: blue;
+
+
+    }
+
+    .navbar-menu li:first-child {
+      margin-left: 0;
+    }
+
+    .navbar-menu a {
+      color: #000000;
+      font-size: 1em;
+      font-weight: 530;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .navbar-toggle {
+      display: none;
+      cursor: pointer;
+
+    }
+    .navbar-logo-and-menu-contents{
+      margin-left:35%;
+    }
+    .bar {
+      width: 20px;
+      height: 3px;
+      background-color: #000000;
+      margin: 9px 0;
+    }
+
+
+
+    .navbar-toggle.active .bar:nth-child(1) {
+      transform: rotate(-52deg) translate(-2px, 4px);
+    }
+
+    .navbar-toggle.active .bar:nth-child(2) {
+      transform: rotate(48deg) translate(-5px, -7px);
+    }
+
+
+    .navbar-and-express-delivary-container{
+      height: 130px;
+    }
+    .popup{
+    display: none;
+    }
+
+    @media (max-width: 832px) {
+        .navbar-menu {
+          display: none;
+        }
+     .popup{
+      display: block;
+     }
+
+      .navbar-toggle {
+        display: block;
+        padding-left: 0;
+        z-index: 999;
+      }
+
+    }
+
+
+
+    .popup {
+    padding-top: 5%;
+      position: fixed;
+      top: 0;
+      right: -50%;
+      width: 50%;
+      height: 100%;
+      background-color: rgb(64, 123, 218);
+      transition: right 0.3s ease-in-out;
+      z-index: 999;
+    }
+    .popup a{
+    color: white;
+    text-decoration: none;
+    }
+    #closeBtn i{
+    cursor: pointer;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    }
+    @media (max-width: 452px) {
+    .navbar-logo img{
+      margin-left: 20px ;
+      width: 100px;
+      height: 60px;
+
+    }
+    }
+
+/* Resetting default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style for the body to cover the full page */
+main {
+    margin: 0;
+    height: 100%;
+    padding: 11% 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #445658; /* Light background color */
+    background-size: cover;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+/* Style for the main container */
+.containers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+/* Style for each child container */
+.con1 {
+    flex: 0 0 calc(45% - 20px); /* Two containers in each line, considering margin */
+    text-align: center;
+    padding: 30px;
+    margin: 20px;
+    border: 3px solid #3498db; /* Border color */
+    border-radius: 10px;
+    color: #333333; /* Dark text color */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: #fffefe; /* Container background color */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease; /* Smooth transition on hover */
+
+}
+
+
+/* Hover effect on each child container */
+.con1:hover {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+
+    background-color: #3498db; /* Accent color on hover */
+    transform: translateY(-5px); /* Move up on hover */
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+footer{
+    width: 100%;
+    height: auto;
+    background-color: rgb(45, 45, 45);
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+
+  }
+  .footer-one{
+    margin: 3%;
+    margin-left: 7%;
+    width: 33%;
+  }
+  .logo{
+    display: flex;
+
+  }
+  .logo img{
+    width: 130px;
+    height: 130px;
+    margin-left: 5%;
+    margin-right: 2%;
+    border-radius: 100%;
+
+  }
+  .logo h3{
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+    margin-top: 39px;
+    margin-right: 50px;
+  }
+  .address{
+    color: white;
+    margin-left: 6%;
+    font-size: 15px;
+    margin-top: 6%;
+  }
+  .address h4{
+    font-size:20px;
+    padding: 2% 0;
+
+  }
+  .footer-two{
+  width: 30%;
+  margin-left: 5%;
+  margin-top: 5%;
+  color: white;
+  }
+  .footer-two h3{
+  font-size: 20px;
+  margin-left: 3%;
+  }
+  .footer-two a{
+  text-decoration: none;
+  color: white;
+  }
+  li a :hover{
+  color: green;
+  }
+  .footer-last {
+  width: 37%;
+  margin-top: 5%;
+  color: white;
+
+  }
+  .footer-last h3{
+  font-size: 20px;
+  margin-bottom: 3%;
+  }
+  .submit-contact{
+  display: flex;
+  margin-top: 10%;
+
+  }
+  .submit-contact input{
+  width: 50%;
+  background:none;
+  padding: 1%;
+  margin-right: 20px;
+  border-radius: 10px;
+  border: 1px solid white;
+  color: white;
+  }
+  .submit-contact input::placeholder {
+  color: white; /* Replace with your desired color code */
+  }
+  .submit-contact button{
+  color: white;
+  background:none;
+  padding: 1% 2%;
+  border-radius: 10px;
+  border: 1px solid white;
+
+  }
+  .social button{
+  margin-top: 4%;
+  width: 35px;
+  height:35px;
+  border-radius: 50%;
+  margin-right: 5px;
+  background: none;
+  border: 2px solid white;
+  margin-bottom: 7%;
+  }
+  i{
+  color: white;
+  }
+  .goog-te-combo{
+  width: 70%;
+  padding: 1.5%;
+  }
+  .last{
+  color: white;
+  font-size: 14px;
+  margin-top: 14%;
+  margin-left: 5%;
+  }
+
+
+  /* footer responsive */
+  @media (max-width:1000px) {
+  footer{
+    flex-direction: row;
+
+  }
+  .footer-one{
+    margin-left: 2%;
+
+  }
+
+
+  .logo img{
+  width: 11vw;
+  height: 11vw;
+  }
+  .logo h3{
+  font-size: 2.8vw;
+  margin-top: 13%;
+  margin-right: 50px;
+  }
+  .address{
+  margin-top: 5%;
+  }
+  .address h4{
+  font-size:2vw;
+  padding: 2% 0;
+
+  }
+  .address p{
+  font-size: 1.5vw
+  }
+  .footer-two{
+  width: 30%;
+  margin-left: 5%;
+  margin-top: 7%;
+  }
+  .footer-two h3{
+  font-size: 20px;
+  }
+  .footer-two a{
+  text-decoration: none;
+  font-size: 1.7vw;
+  color: white;
+  }
+  li a :hover{
+  color: green;
+  }
+  .footer-last {
+  margin-top: 7%;
+  }
+  .footer-last h3{
+  font-size: 20px;
+  margin-bottom: 3%;
+  }
+  .submit-contact{
+  display: flex;
+  margin-top: 10%;
+
+  }
+  .submit-contact input{
+  width: 50%;
+  background:none;
+  padding: 1%;
+  margin-right: 20px;
+  border-radius: 10px;
+  border: 1px solid white;
+  color: white;
+  }
+  .submit-contact input::placeholder {
+  color: white; /* Replace with your desired color code */
+  }
+  .submit-contact button{
+  color: white;
+  background:none;
+  padding: 1% 2%;
+  border-radius: 10px;
+  border: 1px solid white;
+
+  }
+  .social button{
+  margin-top: 4%;
+  width: 35px;
+  height:35px;
+  border-radius: 50%;
+  margin-right: 5px;
+  background: none;
+  border: 2px solid white;
+  }
+  i{
+  color: white;
+  }
+  footer select{
+  width: 70%;
+  padding: 1%;
+  margin-top: 8%;
+  }
+  .last{
+  color: white;
+  font-size: 14px;
+  margin-top: 14%;
+  margin-left: 5%;
+
+  }
+
+  }
+  @media (max-width:550px){
+  footer{
+    flex-direction:column;
+    padding: 3% 15%;
+  }
+  .footer-one{
+  width: 100%;
+
+  }
+
+  .logo img{
+  width: 50px;
+  height: 50px;
+  }
+  .logo h3{
+  font-size: 20px;
+  margin-top: 40px;
+  margin-right: 50px;
+  }
+  .address{
+  margin-top: 5%;
+  }
+  .address h4{
+  font-size:15px;
+  padding: 2% 0;
+
+  }
+  .address p{
+  font-size: 10px;
+  }
+  .footer-two{
+  width: 100%;
+
+  }
+  .footer-two h3{
+  font-size: 20px;
+  }
+  .footer-two a{
+  text-decoration: none;
+  font-size: 15px;
+  color: white;
+  }
+  li a :hover{
+  color: green;
+  }
+  .footer-last {
+  margin-top: 7%;
+  width: 100%;
+
+  }
+  .footer-last h3{
+  font-size: 20px;
+  margin-bottom: 3%;
+  }
+  .submit-contact{
+  display: flex;
+  margin-top: 10%;
+
+  }
+  .submit-contact input{
+  width: 50%;
+  background:none;
+  padding: 1%;
+  margin-right: 20px;
+  border-radius: 10px;
+  border: 1px solid white;
+  color: white;
+  }
+  .submit-contact input::placeholder {
+  color: white; /* Replace with your desired color code */
+  }
+  .submit-contact button{
+  color: white;
+  background:none;
+  padding: 1% 2%;
+  border-radius: 10px;
+  border: 1px solid white;
+
+  }}
+
+  .popup-main{
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 0;
+    position: absolute;
+    top: 10%;
+    right: 20px;
+}
+.popup2 {
+    display: none; /* Initially hide the popup */
+    position: relative;
+    width: 300px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.popup2 h2 {
+    margin-top: 0;
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid  #3498db;
+  display: flex;
+  justify-content: center;
+  color: black;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 8px;
+}
+
+.button:hover {
+  background-color: #3498db; /* Accent color on hover */
+  color: white;
+}

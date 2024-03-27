@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="PROFILE.CSS">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha384-oSmedf5T1dVSeI2t1sAOvnlAP2Pi/oek0zf2P+9GwqhsW87tw2I8M3vccsfMbeST" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="PROFILE.CSS">
+
+  <title>Profile</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navbar-logo"><img src="log.jpeg" alt=""></div>
+      <h1>KOMAL TAYDE</h1>
+
+      <ul class="navbar-menu" id="menu">
+        <li style="display: flex;"><a href="main.html">Home</a></li>
+        <li><a href="/login.html">Login & Register</a></li>
+        <a href="profile.html"><i class="fa-solid fa-user" style="color: rgb(0, 0, 0); font-size: 30px; cursor: pointer;"></i></a>
+      </ul>
+      <div class="navbar-toggle" id="navbarToggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="popup" id="popup">
+    <div id="closeBtn"><i class="fa-solid fa-xmark"></i></div>
+    <ul class="navbar-menu2" id="menu">
+      <li style="display: flex;"><a href="main.html">Home</a></li>
+      <li><a href="/login.html">Login & Register</a></li>
+      <a href="profile.html"><i class="fa-solid fa-user" style="color: rgb(0, 0, 0); font-size: 30px; cursor: pointer;"></i></a>
+    </ul>
+  </div>
+
+  <script>
+    document.getElementById('navbarToggle').addEventListener('click', function () {
+      document.getElementById('popup').style.right = '0';
+    });
+
+    document.getElementById('closeBtn').addEventListener('click', function () {
+      document.getElementById('popup').style.right = '-50%';
+    });
+  </script>
+
+  <main>
+    <div class="profile">
+      <h2>User Profile</h2>
+    </div>
+
+    <div class="profile-container">
+      <img src="pro.webp" alt="Upload Your Pic " class="profile-picture" id="profilePicture" onclick="openFileExplorer()">
+      <span id="profileImageText" onclick="openFileExplorer()"> </span>
+
+      <div class="user-details">
+        <h2 id="userName">Enter your Name</h2>
+        <p id="userEmail">course@example.com</p>
+        <p id="userRole">Student</p>
+        <button onclick="openEditPopup()" id="button">Edit Profile</button>
+      </div>
+
+      <div class="courses-enrolled">
+        <h3>Courses Enrolled:</h3>
+        <ul id="itemList"></ul>
+      </div>
+    </div>
+
+    <!-- Popup for editing -->
+    <div id="editPopup" class="popup">
+      <h2>Edit Profile</h2>
+      <div class="edit-content">
+        <label for="editUserName">Name:</label>
+        <textarea id="editUserName" required></textarea>
+
+        <label for="editUserEmail">Email:</label>
+        <textarea id="editUserEmail"></textarea>
+
+        <label for="editUserRole">Role:</label>
+        <textarea id="editUserRole"></textarea>
+        <button onclick="saveProfile()" id="button">Save</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-one">
+      <div class="logo">
+        <img src="" alt="">
+        <h3>KOMAL TAYDE</h3>
+      </div>
+      <div class="address">
+        <h4>Corporate Headquarters</h4>
+        <p> 3rd Floor, BTM Layout, Bengaluru 560076</p>
+        <h4>Customer Support</h4>
+        <p>+1 408 372 0541</p>
+      </div>
+      <div class="last">
+        <p>Copyright by Truechip © 2023 All Rights Reserved.</p>
+      </div>
+    </div>
+
+    

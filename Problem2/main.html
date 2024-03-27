@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="MAIN.CSS">
+  
+  <title>Main</title>
+</head>
+<body>
+  <header>
+      <nav class="navbar">
+          <div class="navbar-logo"><img src="log.jpeg" alt=""></div>
+          <h1>KOMAL</h1>
+
+          <ul class="navbar-menu" id="menu">
+              <li style="display: flex;"><a href="#" style="font-weight: 700;">Home</a></li>
+
+              <li><a href="login.html">Register & Login</a></li>
+              <a href="profile.html"><i class="fa-solid fa-user" style="color: rgb(55, 55, 55); font-size: 20px; cursor: pointer;"></i></a>
+          </ul>
+          <div class="navbar-toggle" id="navbarToggle">
+              <div class="bar"></div>
+              <div class="bar"></div>
+          </div>
+      </nav>
+  </div>
+  <div class="popup" id="popup">
+      <div id="closeBtn"><i class="fa-solid fa-xmark"></i></div>
+      <ul class="navbar-menu2" id="menu">
+        <li style="display: flex;"><a href="#" style="font-weight: 700;">Home</a></li>
+        <li style="display: flex;">
+            <a href="#" >About Us</a>
+        </li>
+        <li><a href="">Contact Us</a></li>
+        <li><a href="login.html">Register & Login</a></li>
+        <a href="profile.html"><i class="fa-solid fa-user" style="color: rgb(55, 55, 55); font-size: 20px; cursor: pointer;"></i></a>
+      </ul>
+  </div>
+  <script>
+      document.getElementById('navbarToggle').addEventListener('click', function () {
+          document.getElementById('popup').style.right = '0';
+      });
+
+      document.getElementById('closeBtn').addEventListener('click', function () {
+          document.getElementById('popup').style.right = '-50%';
+      });
+  </script>
+
+
+    </nav>
+  </header>
+  <main>
+    <div class="popup-main">
+<div class="popup2" id="popup2">
+    <span class="close-btn" onclick="closePopup()">X</span>
+    <h2>Apply for Jobs</h2>
+    <p>click here to apply for the vidyam</p>
+    <a href="#" class="button">Apply</a>
+</div>
+
+<script>
+    // Function to display the popup after 1 second
+    setTimeout(function() {
+        document.getElementById('popup2').style.display = 'block';
+    }, 1000);
+
+    // Function to close the popup
+    function closePopup() {
+        document.getElementById('popup2').style.display = 'none';
+    }
+</script>
+</div>
+  <div class="containers">
+    <div class="con1" >
+<h2>COURSES</h2>
+    </div>
+    <div class="con1">
+<h2>TEST</h2>
+    </div>
+    <div class="con1">
+<h2>TEXT BOOKS</h2>
+    </div>
+    <div class="con1">
+<h2>DRIVES</h2>
+    </div>
+
+  </div>
+  </main>
+  <footer>
+  <div class="footer-one">
+  <div class="logo">
+      <img src="/logo.jpg" alt="">
+      <h3>KOMAL TAYDE </h3>
+
+  </div>
+  <div class="address">
+  <h4>Corporate Headquarters    </h4>
+  <p> 3rd Floor, BTM Layout, Bengaluru 560076   </p>
+  <h4>Customer Support    </h4>
+<p>+1 408 372 0541</p></div>
+<div class="last">
+<p>Copyright by Truechip © 2023 All Rights Reserved.</p></div>
+</div>
+
+<div class="footer-two">
+  <h3>Quick Links</h3>
+  <ul>
+      <li><a href="#">Latest News</a></li>
+<li><a href="#">Upcoming Events</a></li>
+      <li><a href="#">carrers</a></li>
+      <li><a href="#">Partners & Alliances</a></li>
+      <li><a href="#">Terms of Use</a></li>
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Cookies</a></li>
+
+  </ul></div>
+  <div class="footer-last">
+<h3>Subscribe for Truechip newsletter</h3>
+<div class="submit-contact">
+  <input type="email" placeholder="Your Email Id" id="gmail" required>
+  <button type="submit" onclick="Submit()">submit</button>
+</div>
+<script>
+
+     function Submit() {  
+      var gmail = document.getElementById('gmail');
+
+      gmail.style.border = '1px solid white';
+      if (gmail.checkValidity() === false) {
+          alert("Please enter a valid email address.");
+          gmail.style.borderBottom = '2px solid red';
+          return;
+      }
+      // If all validations pass, proceed to submit
+      openMail2();
+  }
+
+  function openMail2() {
+      // Set the recipient email address
+      var toAddress = 'example@example.com';
+
+      // Set a specific subject
+      var subject = "Let's Make A Conversation";
+
+      // Construct the email body with form input values
+      var body = `My Email: ${document.getElementById('gmail').value}`;
+
+   // Open Gmail compose window with pre-filled details
+var gmailLink = "https://mail.google.com/mail/?view=cm&fs=1&to=prewswkswswshithwswsdws@gmail.com&su=" +
+                      encodeURIComponent("Let's Make A Conversation") +
+                      "&body=" + encodeURIComponent(body);
+
+      window.open(gmailLink, "_blank");
+       // Display an alert message
+       alert(`We get the response. We are exited to start the converstaion. `);
+  }
+</script>
+<div class="social">
+  <a href="#"> <button><i class="fa-brands fa-facebook-f"></i></button></a>
+  <a href="#"><button><i class="fa-brands fa-linkedin"></i></button></a>
+  <a href="#"> <button><i class="fa-brands fa-twitter"></i></button></a>
+  <a href="#"><button><i class="fa-brands fa-youtube"></i></button></a>
+</div>
+
+<div id="google_translate_element"> </div>
+
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,hi'  
+  }, 'google_translate_element');
+}
+function course(){
+    window.location.href = "/dashboard/dashboard.html";
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+</footer>
+
+
+  </body>
+  </html>
